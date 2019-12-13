@@ -1,0 +1,86 @@
+*{
+	margin:0;
+	padding:0;
+	outline:0;
+	/*background:url('images/bac1.jpg');*/
+}
+.container{
+	height:100%;
+	width:80%;
+	margin:0 auto;
+
+	
+}
+
+.complainPage{
+	border-radius: 5px;
+	background: #f2f2f2;
+	padding: 20px;
+}
+::placeholder{
+	font-size:16px;
+	text-transform:capitalize;
+}
+.complainPage h2{
+	font-size:30px;
+	color:#CCCCE0;
+	text-align:center;
+	margin:4px 0 10px 0;
+	text-transform:uppercase;
+	font-weight:bold;
+	
+}
+.complainPage label{
+	margin: 5px 0;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #A89B6B;
+    display: inline-block;
+	
+}
+.complainPage input[type=text], input[type=email], input[type=number]{
+	width: 100%;
+	padding: 15px 12px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size:14px;
+}
+.complainPage textarea{
+	display:inline-block;
+	width:100%;
+	height:80px;
+	padding: 15px 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin:8px 0;
+	resize:none;
+	font-size:14px;
+}
+
+.complainPage input[type=file] {
+	width:270px;
+	display:inline-block;
+	padding:12px 20px;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin:8px 0;
+	font-size:16px;
+}
+.complainPage input[type=submit] {
+	  width: 100%;
+	  background-color: #4CAF50;
+	  color: white;
+	  padding: 14px 20px;
+	  margin: 8px 0;
+	  border: none;
+	  border-radius: 4px;
+	  cursor: pointer;
+	  font-size:16px;
+}
+.complainPage input[type=submit]:hover {
+	background-color: #45a049;
+}

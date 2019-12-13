@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Developers</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'webapp/style.css' %}">
+</head>
+<body>
+	<div class="navigation">
+	    	<li><a href="{% url 'index' %}">Home</a></li>
+	    	<li><a href="/login/">Login</a></li>
+	    	<li><a href="/registration/">Registration</a></li>
+	    	<li><a href="">Complain</a></li>
+	    	<li><a href="{% url 'adminpage'%}" target="_blank">Admin</a></li>
+	    	<li><a href="/information/">Information or Notice</a></li>
+	    	<li><a href="">User Documentation</a></li>
+	    	<li><a href="">Project Developers</a></li>
+	    </div>
+
+	    <div class="developers">
+	    	<div class="groupicdetails">
+	    		<div class="grouppic">
+		    		<img src="{% static 'webapp/images/HeadLogo.png' %}">
+		    	</div>
+		    	<div class="groupdetails">
+		    		<h3>Division By Zero Technology</h3><br>
+		    		<h5>Web Development Group</h5><br><br>
+		    		<p>At The Web Development Group, we strive to create socially engaging digital experiences.</p><br>
+		    		<p>We are a full-service learner, interactive agency comprised of a close knit. fun team of developers, designers, and strategists who focus on building custom solutions for clients that leverage beautiful design with awesome open-source technology. We work closely with the client to analyze and understand their core values and mission in order to develop an effective strategy best suited for their business objectives. </p><br>
+		    		<p>Whether we are evolving an existing brand or helping push a start-up to the next level, we implement the latest trends and technology to push the boundaries for the client in order to create a fun, user-friendly, and game-changing experience that is intuitive while communicating the client's brand on a whole new level.</p>
+		    	</div>
+		    </div>
+	    	<div class="team">
+	    		<h2>Team Members</h2>
+	    		<br>
+	    		<div class="member">
+	    			<div class="memberpro"><img src="{% static 'webapp/images/IMG_20190628_005911_133.jpg' %}"><p>Md Mahidul Moon</p><p>(Founder & CEO)</p></div>
+	    			<div class="memberpro"><img src="{% static 'webapp/images/AE7EA63F-E454-4EF5-A308-30FF8D29F93F.png' %}"><p>Md. Keiuom Miah </p><p>(Co-Founder & CTO)</p></div>
+	    			<div class="memberpro"><img src="{% static 'webapp/images/Screenshot_5.png' %}"><p>Md. Shaheen Mahmud </p><p>(COO & Project Manager)</p></div>
+	    			<div class="memberpro"><img src="{% static 'webapp/images/1C89C2C3-7264-4A72-AA6D-D348DCB3554A.png' %}"><p>Md. Mahmudul Islam </p><p>(Database Administrator)</p></div>
+	    		</div>
+	    		
+	    	</div>
+	    </div>
+<footer>
+    	
+    	<center>
+    		<h4>&copy2019 Division By Zero Municipal Complain Management System</h4>
+    	</center>
+    </footer>
+
+</body>
+</html>

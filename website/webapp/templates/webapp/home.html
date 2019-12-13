@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MCCMS</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'webapp/style.css' %}">
+</head>
+<body>
+    <div class="coverpic">
+    	<img src="{% static 'webapp/images/linkedin_banner_image_1.png' %}">
+    </div>
+
+    	<div class="navigation">
+	    	<li><a href="{% url 'index' %}">Home</a></li>
+	    	<li><a href="/login/">Login</a></li>
+	    	<li><a href="/registration/">Registration</a></li>
+	    	<li><a href="{% url 'complain' %}">Complain</a></li>
+	    	<li><a href="{% url 'adminpage'%}" target="_blank">Admin</a></li>
+	    	<li><a href="{% url 'information' %}">Information or Notice</a></li>
+	    	<li><a href="">User Documentation</a></li>
+	    	<li><a href="{% url 'detail' %}">Project Developers</a></li>
+	    </div>
+	    <div class="datetime">
+	    	<p>Time: {{ time }} Date: {{ date }}<br><br>Notice(s): {{ notice }}<br><br>Registered User(s): {{ user_count }}<br><br>Complain(s):{{ complain_count }}</p>
+	    </div><br>
+	    <div class="projectdescription">
+	    	<h2>What is MCCMS?</h2>
+	    	<p>Municipal Corporation Complaint is a web-based project. People in Bangladesh have no direct way of communicating with people in their municipality using web sites. The platform focuses on creating best UI and UX for user for using this system easily.  Our main goal is directly contact between the municipal people and the general public through the web site, so that they can share all of their daily life problems.</p><br><br>
+	    	<h2>Why MCCMS???</h2>
+	    	<p>The main purpose of this project is to help the public solve their corporation complaint problem. Getting their problems solved in online without going to the municipal officer regularly until the problem is solved. Public can save the time. Smart and easy way to solve.</p><br><br>
+	    	<h2>Advantages:</h2>
+	    	<ul>
+	    		<li>Getting their problems solved in online without going to the officer regularly until the problem is solved.</li>
+	    		<li>Public can save the time.</li>
+	    		<li>Smart and easy way to solve.</li>
+	    		<li>Proper use of technology.</li>
+	    		<li>Supposed to manage our daily work on time, accurately, very fast and with our satisfaction.</li>
+	    	</ul>
+	    	
+	    </div>
+	    
+    <footer>
+    	<a href="{% url 'detail' %}"><img src="{% static 'webapp/images/HeadLogo.png' %}"></a>
+    	<center>
+    		<h4>&copy2019 Division By Zero Municipal Complain Management System</h4>
+    	</center>
+    </footer>
+</body>
+</html>

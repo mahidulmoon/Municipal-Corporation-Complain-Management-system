@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registration Form</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="{% static 'webapp/registration/css/opensans-font.css' %}">
+	<!-- Jquery -->
+	<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{% static 'webapp/registration/css/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'webapp/style.css' %}">
+</head>
+<body class="form-v4">
+	<div class="navigation">
+	    	<li><a href="{% url 'index' %}">Home</a></li>
+	    	<li><a href="{% url 'complain' %}">Complain</a></li>
+	    	<li><a href="{% url 'adminpage'%}" target="_blank">Admin</a></li>
+	    	<li><a href="{% url 'information' %}">Information or Notice</a></li>
+	    	<li><a href="">User Documentation</a></li>
+	    	<li><a href="{% url 'detail' %}">Project Developers</a></li>
+	    </div>
+	<div class="page-content">
+		<div class="form-v4-content">
+			<div class="form-left">
+				<h2>INFOMATION</h2>
+				<p class="text-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et molestie ac feugiat sed. Diam volutpat commodo.</p>
+				<p class="text-2"><span>Eu ultrices:</span> Vitae auctor eu augue ut. Malesuada nunc vel risus commodo viverra. Praesent elementum facilisis leo vel.</p><br>
+				<div class="form-left-last">
+					<a href="/login/">Have An Account???</a>
+				</div>
+			</div>
+			<form class="form-detail" action="" method="post" id="myform">
+				{% csrf_token %}
+				<h2>REGISTER FORM</h2>
+				<div class="form-row">
+					<label for="your_email">Username</label>
+					<input type="text" name="username" id="username" class="input-text" required>
+				</div>
+				<div class="form-group">				
+					<div class="form-row form-row-1">
+						<label for="first_name">First Name</label>
+						<input type="text" name="first_name" id="first_name" class="input-text" required>
+					</div>
+					<div class="form-row form-row-1">
+						<label for="last_name">Last Name</label>
+						<input type="text" name="last_name" id="last_name" class="input-text" required>
+					</div>
+				</div>
+				<div class="form-row">
+					<label for="your_email">Your Email</label>
+					<input type="text" name="your_email" id="your_email" class="input-text" required>
+				</div>
+				<div class="form-group">
+					<div class="form-row form-row-1 ">
+						<label for="password">Password</label>
+						<input type="password" name="password" id="password" class="input-text" required>
+					</div>
+					<div class="form-row form-row-1">
+						<label for="comfirm-password">Comfirm Password</label>
+						<input type="password" name="comfirm_password" id="comfirm_password" class="input-text" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="form-row form-row-1 ">
+						<label for="postalcode">Postal Code</label>
+						<input type="text" name="postalcode" id="postalcode" class="input-text" required>
+					</div>
+					<div class="form-row form-row-1">
+						<label for="address">Address</label>
+						<input type="text" name="address" id="address" class="input-text" required>
+					</div>
+				</div>
+				<div>
+					{% if messages %}
+					<ul class="messages">
+					    {% for message in messages %}
+					    <p style="color: red;">{{ message }}</p>
+					    {% endfor %}
+					</ul>
+					{% endif %}
+				</div>
+				<div class="form-row-last">
+					<input type="submit" name="" class="register" value="Register">
+				</div>
+			</form>
+		</div>
+	</div>
+	
+<footer>
+    	
+    	<center>
+    		<h4>&copy2019 Division By Zero Municipal Complain Management System</h4>
+    	</center>
+    </footer>
+</body>
+</html>

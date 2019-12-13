@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Complain Page</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'webapp/ComplainPageDesign/style.css' %}" media="all" />
+	<link rel="stylesheet" type="text/css" href="{% static 'webapp/style.css' %}">
+</head>
+<body onload="addContentInPlaceholder();">
+	<div class="navigation">
+	    	<li><a href="{% url 'index' %}">Home</a></li>
+	    	<li><a href="{% url 'information' %}">Dashboard</a></li>
+	    	<li><a href="{% url 'adminpage' %}" target="_blank">Admin</a></li>
+	    	<li><a href="{% url 'information' %}">Information or Notice</a></li>
+	    	<li><a href="">User Documentation</a></li>
+	    	<li><a href="{% url 'detail' %}">Project Developers</a></li>
+	    </div>
+	<div>
+					{% if messages %}
+					<ul class="messages">
+					    {% for message in messages %}
+					    <p style="color: red;">{{ message }}</p>
+					    {% endfor %}
+					</ul>
+					{% endif %}
+				</div>
+	<div>
+		<div class="container">
+			<div class="complainPage">
+				<h2> Complain Page </h2>
+				<form action="" method="post" enctype="multipart/form-data">
+					{% csrf_token %}
+					<label for="name">Your Name (Username)</label>
+					<input type="text" name="name" id="name" required="required" autocomplete="off"  value="{{ user.username }}"/>
+					<label for="email">Your Email </label>
+					<input type="email" name="email" id="email"  autocomplete="off"   value="{{ user.email }}" />
+					<label for="phone-number">Your Phone Number </label>
+					<input type="text" name="phone-number" id="phone-number" required="required" autocomplete="off"   placeholder="Enter your phone number"/>
+					<label for="area">Your Area Name or Address </label>
+					<input type="text" name="area" id="area" required="required" autocomplete="off"   placeholder="Complaint area name"/>
+					<label for="pincode">Area Postal Code </label>
+					<input type="number" required="required" id="pincode"  name="pincode" autocomplete="off"  placeholder="Enter area postal code"/>
+					<label for="holdingno">Your Holding Number </label>
+					<input type="number" required="required" id="holdingno"  name="holdingno" autocomplete="off"  placeholder="Enter your holding number "/>
+					<label for="comoplainsubject">Complain Subject </label>
+					<input type="text" required="required" id="comoplainsubject"  name="comoplainsubject" autocomplete="off"  placeholder="Enter your complain subject here "/>
+					<label for="complain">Your Complain Here </label>
+					<textarea  required="required" id="complain" name="complainmsg" autocomplete="off" placeholder="Enter your complain here"> </textarea>
+					<label for="file">Upload File/Image </label>
+					<input type="file"  name="photo" multiple />
+					
+					
+					<input type="submit" value="Submit" required />
+					
+				</form>
+
+			</div>
+		</div>
+	</div>
+<footer>
+    	
+    	<center>
+    		<h4>&copy2019 Division By Zero Municipal Complain Management System</h4>
+    	</center>
+    </footer>
+</body>
+</html>
