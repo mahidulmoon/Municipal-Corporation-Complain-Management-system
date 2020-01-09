@@ -117,7 +117,7 @@
       {% for complain in complains %}               
       <li class="media">
         <a class="pull-left" href="#">
-          <img class="media-object img-circle img-comments" src="{{ complain.Complain_table.image_field.url }}" />
+          <img class="media-object img-circle img-comments" src="{{ complain.image_field.url }}" />
         </a>
         <div class="media-body">
           <h4 class="media-heading">{{ complain.complain_subject }}</h4><h6>Complained at:{{ complain.timeshow }} of {{ complain.dateshow }}</h6>
